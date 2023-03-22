@@ -7,29 +7,25 @@
   text-transform: uppercase;
   line-height: 1;
   border: none;
-  font-weight: $fw-700;
+  font-weight: $font-weight-bold;
   padding: $button-padding-block $button-padding-inline;
   transition: 275ms ease;
 
   &[data-type="accent"] {
-    background-color: clr(accent, 400);
-    color: clr(neutral, 900);
+    background-color: $color-accent-400;
+    color: $color-primary-800;
 
-    // &:is(:hover, :focus) {
-    //   background-color: clr(accent, 500);
-    //   color: clr(neutral, 100);
-    // }
   }
 
   &[data-type="outline"] {
     background: transparent;
-    outline: $outline-size solid clr(neutral, 100);
+    outline: $outline-size solid $color-neutral-100;
     outline-offset: calc($outline-size * -1);
-    color: clr(neutral, 100);
+    color: $color-neutral-100;
   }
 
   &:is(:hover, :focus) {
-    background-color: clr(neutral, 100);
-    color: clr(neutral, 900);
+    background-color: $color-neutral-100;
+    color: $color-primary-800;
   }
 }
